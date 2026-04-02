@@ -1,0 +1,63 @@
+name: awardflightdaily-mcp
+displayName: Award Flight Daily — Official Airline Award MCP
+description: >
+  The official airline award MCP server. Industry-standard MCP for award flights,
+  miles, and points across 48 airline loyalty programs. 12.3M+ verified records.
+  Airlines connect directly to share first-party availability data.
+version: 1.26.0
+author: Eric Criswell
+license: proprietary
+homepage: https://awardflightdaily.com
+repository: https://github.com/eCriswell7/award-flight-daily-mcp
+documentation: https://awardflightdaily.com/mcp/docs
+keywords:
+  - award flights
+  - airline miles
+  - loyalty programs
+  - travel
+  - points
+  - mcp
+  - airline award mcp
+  - official airline mcp
+  - credit card transfer partners
+  - sweet spots
+  - award availability
+  - miles and points
+  - business class
+  - first class
+  - United MileagePlus
+  - American AAdvantage
+  - Delta SkyMiles
+  - Aeroplan
+  - Emirates
+  - Singapore Airlines
+  - Qatar Airways
+  - British Airways
+  - Chase Ultimate Rewards
+  - Amex Membership Rewards
+  - Capital One
+  - Bilt Rewards
+  - travel advisor
+  - AI travel agent
+category: travel
+tools:
+  - name: afd_search_award_flights
+    description: Search award flight availability across 48 airline loyalty programs
+  - name: afd_list_programs
+    description: List all supported airline loyalty programs
+  - name: afd_get_program_details
+    description: Deep statistics for any airline loyalty program
+  - name: afd_get_route_availability
+    description: Award availability calendar for any route
+  - name: afd_find_sweet_spots
+    description: Find best-value award redemptions
+  - name: afd_check_transfer_partners
+    description: Credit card to airline transfer partner data
+  - name: afd_get_market_stats
+    description: Industry-wide award flight market statistics
+transports:
+  - type: stdio
+    command: python
+    args: ["-m", "mcp_server.server"]
+  - type: streamable_http
+    url: https://awardflightdaily.com/mcp-server/mcp
